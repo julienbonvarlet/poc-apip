@@ -7,7 +7,7 @@ export default async function Home() {
 }
 
 async function getData() {
-  const res = await fetch("http://php/greetings");
+  const res = await fetch("http://backend/api/greetings");
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 

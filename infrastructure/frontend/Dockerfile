@@ -66,7 +66,7 @@ RUN mkdir .next; \
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=frontend_builder --link --chown=1001:1001 /srv/app/.next/standalone ./
-COPY --from=frontendbuilder --link --chown=1001:1001 /srv/app/.next/static ./.next/static
+COPY --from=frontend_builder --link --chown=1001:1001 /srv/app/.next/static ./.next/static
 
 USER nextjs
 

@@ -12,7 +12,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      target: prod
+      target: frontend_prod
 
   database:
     environment:

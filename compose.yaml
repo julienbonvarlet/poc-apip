@@ -1,6 +1,6 @@
 services:
   backend:
-    image: ${IMAGES_PREFIX:-teamplistic}-backend
+    image: ${IMAGES_PREFIX:-}-backend
     depends_on:
       - database
     restart: unless-stopped
@@ -33,7 +33,7 @@ services:
         protocol: udp
 
   frontend:
-    image: ${IMAGES_PREFIX:-teamplistic}-frontend
+    image: ${IMAGES_PREFIX:-}-frontend
     environment:
       NEXT_PUBLIC_ENTRYPOINT: http://backend
 

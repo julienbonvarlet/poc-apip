@@ -80,7 +80,7 @@
 		|| query({'_rsc': '*'})`
 
 	# Comment the following line if you don't want Next.js to catch requests for HTML documents.
-	# In this case, they will be handled by the PHP app.
+	# In this case, they will be handled by the Backend app.
 	reverse_proxy @frontend http://{$FRONTEND_UPSTREAM}
 
 	php_server

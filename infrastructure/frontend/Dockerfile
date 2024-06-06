@@ -22,7 +22,7 @@ RUN corepack enable && \
 # Learn more here: https://nextjs.org/telemetry
 # Delete the following line in case you want to enable telemetry during dev and build.
 ENV NEXT_TELEMETRY_DISABLED 1
-
+ENV NODE_TLS_REJECT_UNAUTHORIZED 0
 
 # Development image
 FROM frontend_base as frontend_dev

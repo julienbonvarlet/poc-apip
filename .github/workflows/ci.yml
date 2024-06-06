@@ -42,10 +42,10 @@ jobs:
         name: Check HTTP reachability
         run: curl -v --fail-with-body http://localhost
       -
-        name: Check API reachability
+        name: Check Backend reachability
         run: curl -vk --fail-with-body https://localhost
       -
-        name: Check PWA reachability
+        name: Check Frontend reachability
         run: "curl -vk --fail-with-body -H 'Accept: text/html' https://localhost"
       -
         name: Create test database

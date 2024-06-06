@@ -1,17 +1,17 @@
 # Production environment override
 services:
-  php:
+  backend:
     build:
-      context: ./api
-      target: frankenphp_prod
+      context: ./backend
+      target: backend_prod
     environment:
       APP_SECRET: ${APP_SECRET}
       MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
       MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
 
-  pwa:
+  frontend:
     build:
-      context: ./pwa
+      context: ./frontend
       target: prod
 
   database:

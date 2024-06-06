@@ -43,7 +43,7 @@ jobs:
         run: curl -v --fail-with-body http://localhost
       -
         name: Check Backend reachability
-        run: curl -vk --fail-with-body https://localhost
+        run: curl -vk --fail-with-body https://localhost/api
       -
         name: Check Frontend reachability
         run: "curl -vk --fail-with-body -H 'Accept: text/html' https://localhost"

@@ -2,11 +2,11 @@
 DOCKER_COMP = docker compose
 
 # Docker containers
-PHP_CONT = $(DOCKER_COMP) exec php
+BACKEND_CONT = $(DOCKER_COMP) exec backend
 
 # Executables
-PHP      = $(PHP_CONT) php
-COMPOSER = $(PHP_CONT) composer
+PHP      = $(BACKEND_CONT) php
+COMPOSER = $(BACKEND_CONT) composer
 SYMFONY  = $(PHP) bin/console
 
 # Misc
@@ -33,10 +33,10 @@ logs: ## Show live logs
 	@$(DOCKER_COMP) logs --tail=0 --follow
 
 sh: ## Connect to the Backend container
-	@$(PHP_CONT) sh
+	@$(BACKEND_CONT) sh
 
 bash: ## Connect to the Backend container via bash so up and down arrows go to previous commands
-	@$(PHP_CONT) bash
+	@$(BACKEND_CONT) bash
 
 test: ## Start tests with phpunit, pass the parameter "c=" to add options to phpunit, example: make test c="--group e2e --stop-on-failure"
 	@$(eval c ?=)

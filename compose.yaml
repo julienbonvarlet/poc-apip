@@ -34,6 +34,9 @@ services:
 
   frontend:
     image: ${IMAGES_PREFIX:-}-frontend
+    depends_on:
+      - backend
+      - database
     environment:
       NEXT_PUBLIC_ENTRYPOINT: http://backend
 
